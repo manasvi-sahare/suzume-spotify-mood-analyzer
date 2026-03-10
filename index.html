@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suzume - Music Mood Magic</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sakura-petals"></div>
+<div class="confetti"></div>
+<div class="container">
+  <h1>Suzume <span class="title-emoji">✨</span></h1>
+  <p class="subtitle">What's your song's vibe?</p>
+
+  <div id="login-section">
+    <button class="spotify-login" onclick="loginWithSpotify()">
+      <span class="spotify-icon">🔮</span> Magical Spotify Login
+    </button>
+    <p class="or-divider">or</p>
+    <button class="enter-btn" onclick="window.location.href='mood.html'">
+      <span class="search-icon">🐇</span> Enter Without Login
+    </button> 
+  </div>
+</div>
+
+<div class="floating-emojis">
+  <span>🌸</span><span>🍃</span><span>✨</span><span>🎀</span>
+</div>
+
+<div class="mascot">🐦</div>
+
+<div class="footer">
+  <p>Suzume - Music Mood Magic</p>
+  <p>Unlock the hidden emotions in your music!</p>
+  <p>By Suzume</p>
+</div>
+
+<script src="spotify.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
