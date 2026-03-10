@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Song Mood Analysis | Suzume</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="sakura-petals"></div>
+  <div class="confetti"></div>
+  <div class="container">
+    <h1>Suzume <span class="title-emoji">✨</span></h1>
+    <p class="subtitle">Discover your song's secret mood!</p>
+    
+    <div class="nav-buttons">
+      <button onclick="window.location.href='index.html'">
+        <span class="home-icon">🏠</span> Home
+      </button>
+    </div>
+
+    <div id="search-section">
+      <div class="search-box">
+        <input type="text" id="song-search" placeholder="Type a song name...">
+        <button onclick="searchSong()">
+          <span class="search-icon">🐇</span> Find the Magic!
+        </button>
+      </div>
+      <div id="search-results"></div>
+    </div>
+  </div>
+
+  <div class="floating-emojis">
+    <span>🎵</span><span>🎶</span><span>🎧</span><span>🎤</span>
+    <span>🌸</span><span>🍬</span><span>🌈</span><span>💫</span>
+  </div>
+
+  <div class="mascot">🐦</div>
+
+  <iframe id="spotify-web-player" style="display:none" 
+          src="https://open.spotify.com/embed" 
+          allow="autoplay; encrypted-media"></iframe>
+
+  <script src="spotify.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
