@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Auth - Suzume</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="confetti"></div>
+  <div class="callback-container">
+    <h2>Magical Connection in Progress...</h2>
+    <div class="loading-spinner big">
+      <span class="heart-emoji">💖</span>
+    </div>
+    <p>We're connecting to Spotify's enchanted library</p>
+  </div>
+  
+  <script>
+    const hash = window.location.hash.substring(1);
+    const params = new URLSearchParams(hash);
+    const token = params.get('access_token');
+
+    if (token) {
+      localStorage.setItem('spotify_token', token);
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1500);
+    } else {
+      document.querySelector('.callback-container').innerHTML = `
+        <div class="error-message">
+          <p>❌ The magic connection failed</p>
+          <button onclick="window.location.href='index.html'">Try Again</button>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
